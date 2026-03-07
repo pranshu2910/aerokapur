@@ -957,9 +957,9 @@ section,
 }
 
 /*--------------------------------------------------------------
-# Featured Services Section
+# Featured Products Section
 --------------------------------------------------------------*/
-.featured-services .service-item {
+.featured-products .service-item {
   background-color: var(--surface-color);
   box-shadow: 0px 0 25px 0 rgba(0, 0, 0, 0.1);
   padding: 50px 30px;
@@ -969,7 +969,7 @@ section,
   z-index: 1;
 }
 
-.featured-services .service-item:before {
+.featured-products .service-item:before {
   content: "";
   position: absolute;
   background: var(--accent-color);
@@ -978,41 +978,41 @@ section,
   z-index: -1;
 }
 
-.featured-services .service-item .icon {
+.featured-products .service-item .icon {
   margin-bottom: 10px;
 }
 
-.featured-services .service-item .icon i {
+.featured-products .service-item .icon i {
   color: var(--accent-color);
   font-size: 36px;
   transition: ease-in-out 0.3s;
 }
 
-.featured-services .service-item h4 {
+.featured-products .service-item h4 {
   font-weight: 700;
   margin-bottom: 15px;
   font-size: 20px;
 }
 
-.featured-services .service-item h4 a {
+.featured-products .service-item h4 a {
   color: var(--heading-color);
   transition: ease-in-out 0.3s;
 }
 
-.featured-services .service-item p {
+.featured-products .service-item p {
   line-height: 24px;
   font-size: 14px;
   margin-bottom: 0;
   transition: ease-in-out 0.3s;
 }
 
-.featured-services .service-item:hover h4 a,
-.featured-services .service-item:hover .icon i,
-.featured-services .service-item:hover p {
+.featured-products .service-item:hover h4 a,
+.featured-products .service-item:hover .icon i,
+.featured-products .service-item:hover p {
   color: var(--contrast-color);
 }
 
-.featured-services .service-item:hover:before {
+.featured-products .service-item:hover:before {
   background: var(--accent-color);
   inset: 0;
   border-radius: 0px;
@@ -1172,9 +1172,9 @@ section,
 }
 
 /*--------------------------------------------------------------
-# Services Section
+# Products Section
 --------------------------------------------------------------*/
-.services .service-item {
+.products .service-item {
   background-color: var(--surface-color);
   text-align: center;
   border: 1px solid color-mix(in srgb, var(--default-color), transparent 85%);
@@ -1183,7 +1183,7 @@ section,
   height: 100%;
 }
 
-.services .service-item .icon {
+.products .service-item .icon {
   margin: 0 auto;
   width: 64px;
   height: 64px;
@@ -1196,30 +1196,30 @@ section,
   transition: 0.3s;
 }
 
-.services .service-item .icon i {
+.products .service-item .icon i {
   color: var(--contrast-color);
   font-size: 28px;
   transition: ease-in-out 0.3s;
 }
 
-.services .service-item h3 {
+.products .service-item h3 {
   font-weight: 700;
   margin: 10px 0 15px 0;
   font-size: 22px;
   transition: 0.3s;
 }
 
-.services .service-item p {
+.products .service-item p {
   line-height: 24px;
   font-size: 14px;
   margin-bottom: 0;
 }
 
-.services .service-item:hover {
+.products .service-item:hover {
   border-color: var(--accent-color);
 }
 
-.services .service-item:hover h3 {
+.products .service-item:hover h3 {
   color: var(--accent-color);
 }
 
@@ -1823,14 +1823,14 @@ section,
 /*--------------------------------------------------------------
 # Service Details Section
 --------------------------------------------------------------*/
-.service-details .services-list {
+.service-details .products-list {
   background-color: var(--surface-color);
   padding: 10px 30px;
   border: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
   margin-bottom: 20px;
 }
 
-.service-details .services-list a {
+.service-details .products-list a {
   display: block;
   line-height: 1;
   padding: 8px 0 8px 15px;
@@ -1840,17 +1840,17 @@ section,
   transition: 0.3s;
 }
 
-.service-details .services-list a.active {
+.service-details .products-list a.active {
   color: var(--heading-color);
   font-weight: 700;
   border-color: var(--accent-color);
 }
 
-.service-details .services-list a:hover {
+.service-details .products-list a:hover {
   border-color: var(--accent-color);
 }
 
-.service-details .services-img {
+.service-details .products-img {
   margin-bottom: 20px;
 }
 
