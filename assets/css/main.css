@@ -1015,6 +1015,24 @@ section,
   margin-bottom: 1.25rem;
   font-size: 1rem;
 }
+.hero-cta-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+.hero-cta-buttons .btn-get-started {
+  margin: 0;
+}
+.hero-cta-buttons .btn-outline {
+  background: transparent;
+  color: var(--accent-color);
+  border: 2px solid var(--accent-color);
+}
+.hero-cta-buttons .btn-outline:hover {
+  background: var(--accent-color);
+  color: var(--contrast-color);
+  border-color: var(--accent-color);
+}
 .key-product-card {
   background: var(--surface-color);
   padding: 1.5rem;
@@ -1334,6 +1352,21 @@ section,
 }
 .blog-card-body h4 a:hover {
   color: var(--accent-color);
+}
+
+.product-lead {
+  font-size: 1.05rem;
+  color: var(--default-color);
+  max-width: 720px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.product-pricing .text-muted {
+  color: color-mix(in srgb, var(--default-color), transparent 25%) !important;
+}
+.contact-business-name {
+  font-size: 1.1rem;
+  color: var(--heading-color);
 }
 
 /*--------------------------------------------------------------
