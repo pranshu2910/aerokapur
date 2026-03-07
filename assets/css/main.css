@@ -19,28 +19,30 @@
 
 /* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
 :root { 
-  --background-color: #ffffff; /* Background color for the entire website, including individual sections */
-  --default-color: #444444; /* Default color used for the majority of the text content across the entire website */
-  --heading-color: #222222; /* Color for headings, subheadings and title throughout the website */
-  --accent-color: #106eea; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
-  --surface-color: #ffffff; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
-  --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
+  --background-color: #ffffff;
+  --default-color: #444444;
+  --heading-color: #1e3a2f;
+  --accent-color: #2d6a4f;
+  --surface-color: #ffffff;
+  --contrast-color: #ffffff;
+  --aerokapur-sky: #e8f4f8;
+  --aerokapur-leaf: #2d6a4f;
 }
 
 /* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
 :root {
-  --nav-color: #222222;  /* The default color of the main navmenu links */
-  --nav-hover-color: #106eea; /* Applied to main navmenu links when they are hovered over or active */
+  --nav-color: #1e3a2f;
+  --nav-hover-color: #2d6a4f;
   --nav-mobile-background-color: #ffffff; /* Used as the background color for mobile navigation menu */
   --nav-dropdown-background-color: #ffffff; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
   --nav-dropdown-color: #222222; /* Used for navigation links of the dropdown items in the navigation menu. */
-  --nav-dropdown-hover-color: #106eea; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
+  --nav-dropdown-hover-color: #2d6a4f; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
 }
 
 /* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the sam color scheme. */
 
 .light-background {
-  --background-color: #f5f9ff;
+  --background-color: #e8f4f8;
   --surface-color: #ffffff;
 }
 
@@ -212,11 +214,34 @@ h6 {
   margin-right: 8px;
 }
 
+.header .logo .logo-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+  margin-left: 10px;
+}
+.header .logo .logo-leaf {
+  color: var(--aerokapur-leaf);
+  font-size: 24px;
+  line-height: 1;
+}
+.header .logo .tagline {
+  font-size: 10px;
+  font-weight: 500;
+  color: var(--default-color);
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  margin-top: 2px;
+}
 .header .logo h1 {
-  font-size: 30px;
+  font-size: 24px;
   margin: 0;
   font-weight: 700;
   color: var(--heading-color);
+}
+.header .logo h1 sup {
+  font-size: 0.5em;
+  top: -0.4em;
 }
 
 .scrolled .header {
@@ -597,6 +622,16 @@ h6 {
   color: var(--accent-color);
 }
 
+.footer-tagline {
+  font-size: 0.9rem;
+  color: var(--default-color);
+  margin-top: 0.5rem;
+}
+.footer .logo-leaf-sm {
+  color: var(--aerokapur-leaf);
+  font-size: 1.25rem;
+  margin-right: 8px;
+}
 .footer .footer-about a {
   color: var(--heading-color);
   font-size: 24px;
@@ -946,6 +981,131 @@ section,
   }
 }
 
+/* AeroKapur Hero */
+.hero-aerokapur {
+  background: linear-gradient(135deg, var(--aerokapur-sky) 0%, #ffffff 50%, rgba(232, 244, 248, 0.6) 100%);
+  min-height: auto;
+  padding: 50px 0 60px;
+  background-image: none;
+}
+.hero-aerokapur::before {
+  display: none;
+}
+.hero-aerokapur .hero-bg-pattern {
+  position: absolute;
+  inset: 0;
+  opacity: 0.06;
+  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 5 L35 25 L55 30 L35 35 L30 55 L25 35 L5 30 L25 25 Z' fill='%232d6a4f'/%3E%3C/svg%3E");
+}
+.hero-cta-box {
+  background: linear-gradient(135deg, var(--aerokapur-sky), #fff);
+  padding: 2rem;
+  border-radius: 12px;
+  border: 1px solid rgba(45, 106, 79, 0.15);
+  box-shadow: 0 4px 20px rgba(45, 106, 79, 0.08);
+}
+.hero-cta-title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--heading-color);
+  margin-bottom: 0.5rem;
+}
+.hero-cta-text {
+  color: var(--default-color);
+  margin-bottom: 1.25rem;
+  font-size: 1rem;
+}
+.key-product-card {
+  background: var(--surface-color);
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(45, 106, 79, 0.12);
+}
+.key-product-card h3 {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--heading-color);
+  margin-bottom: 1rem;
+}
+.key-product-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1rem;
+}
+.key-product-list li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.9rem;
+  color: var(--default-color);
+  margin-bottom: 6px;
+}
+.key-product-list li i {
+  color: var(--aerokapur-leaf);
+}
+.key-product-duration,
+.key-product-offer {
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.key-product-offer {
+  font-weight: 600;
+  color: var(--accent-color);
+}
+.key-product-img-placeholder {
+  margin-top: 1rem;
+  padding: 2rem;
+  background: var(--aerokapur-sky);
+  border-radius: 8px;
+  text-align: center;
+  color: var(--aerokapur-leaf);
+}
+.key-product-img-placeholder i {
+  font-size: 2.5rem;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+.key-product-img-placeholder span {
+  font-size: 0.85rem;
+  color: var(--default-color);
+}
+.hero-benefits {
+  background: var(--surface-color);
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
+  border: 1px solid rgba(45, 106, 79, 0.1);
+}
+.hero-benefits-title {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--heading-color);
+  margin-bottom: 1rem;
+}
+.hero-benefit-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.9rem;
+  color: var(--default-color);
+  margin-bottom: 0.75rem;
+}
+.hero-benefit-item i {
+  color: var(--aerokapur-leaf);
+  font-size: 1.1rem;
+}
+
+@media (max-width: 991px) {
+  .hero-aerokapur .key-product-card,
+  .hero-aerokapur .hero-benefits {
+    margin-top: 1rem;
+  }
+}
+
 @keyframes up-down {
   0% {
     transform: translateY(10px);
@@ -1067,6 +1227,113 @@ section,
 
 .about .about-content p:last-child {
   margin-bottom: 0;
+}
+
+.about-lead {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  color: var(--default-color);
+}
+.about .about-content ul.about-features li i {
+  color: var(--aerokapur-leaf);
+}
+.about-img-placeholder {
+  background: var(--aerokapur-sky);
+  border-radius: 12px;
+  padding: 4rem 2rem;
+  text-align: center;
+  color: var(--aerokapur-leaf);
+  min-height: 280px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+}
+.about-img-placeholder i {
+  font-size: 4rem;
+}
+.about-img-placeholder span {
+  font-size: 1rem;
+  color: var(--default-color);
+}
+
+/*--------------------------------------------------------------
+# Gallery (AeroKapur)
+--------------------------------------------------------------*/
+.gallery-item.polaroid-style {
+  background: var(--surface-color);
+  padding: 12px 12px 36px;
+  border-radius: 4px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  transform: rotate(-1deg);
+  transition: transform 0.3s;
+}
+.gallery-item.polaroid-style:nth-child(even) {
+  transform: rotate(1deg);
+}
+.gallery-item.polaroid-style:hover {
+  transform: rotate(0) scale(1.02);
+}
+.gallery-placeholder {
+  background: var(--aerokapur-sky);
+  border-radius: 4px;
+  aspect-ratio: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  color: var(--aerokapur-leaf);
+}
+.gallery-placeholder i {
+  font-size: 2.5rem;
+}
+.gallery-placeholder span {
+  font-size: 0.85rem;
+  color: var(--default-color);
+}
+
+/*--------------------------------------------------------------
+# Blog cards (AeroKapur)
+--------------------------------------------------------------*/
+.blog-card {
+  background: var(--surface-color);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+  border: 1px solid rgba(45, 106, 79, 0.08);
+  transition: 0.3s;
+}
+.blog-card:hover {
+  box-shadow: 0 8px 24px rgba(45, 106, 79, 0.12);
+}
+.blog-card-img {
+  aspect-ratio: 4/3;
+}
+.blog-img-placeholder {
+  width: 100%;
+  height: 100%;
+  background: var(--aerokapur-sky);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--aerokapur-leaf);
+  font-size: 2rem;
+}
+.blog-card-body {
+  padding: 1rem;
+}
+.blog-card-body h4 {
+  font-size: 0.95rem;
+  margin: 0;
+}
+.blog-card-body h4 a {
+  color: var(--heading-color);
+}
+.blog-card-body h4 a:hover {
+  color: var(--accent-color);
 }
 
 /*--------------------------------------------------------------
@@ -1336,6 +1603,10 @@ section,
 .testimonials .swiper-pagination .swiper-pagination-bullet-active {
   background-color: var(--default-color);
   opacity: 1;
+}
+
+.testimonials.light-background .swiper-pagination .swiper-pagination-bullet-active {
+  background-color: var(--accent-color);
 }
 
 @media (min-width: 992px) {
@@ -1951,6 +2222,3 @@ section,
 /*--------------------------------------------------------------
 # Starter Section Section
 --------------------------------------------------------------*/
-.starter-section {
-  /* Add your styles here */
-}
